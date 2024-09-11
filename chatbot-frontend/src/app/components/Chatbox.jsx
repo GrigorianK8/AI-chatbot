@@ -31,7 +31,7 @@ const Chatbox = () => {
 
       <div className="h-[77%]">
         {responses.length ? <div className='flex flex-col py-5 px-5 overflow-y-auto h-full custom-scrollbar'>
-          {[1,1,1].map((item, index) => 
+          {responses.map((item, index) => 
           item.role=='user' ? <div key={index} className='self-end'>
             <PromptMessage message={item.message}/>
           </div> : <div key={index} className='self-start'>
